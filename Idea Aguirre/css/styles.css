@@ -38,8 +38,8 @@
   align-items: center;
   justify-content: space-around;
   list-style: none;
-  width: 350px;
-  height: 40px; }
+  height: 40px;
+  width: 350px; }
 
 .noticias {
   background-color: brown;
@@ -60,8 +60,8 @@
   justify-content: space-between;
   margin-top: 20px; }
   .noticias__cuerpo iframe {
-    width: 1000px;
     height: 300px;
+    width: 1000px;
     margin-left: 20px; }
   .noticias__cuerpo p {
     display: flex;
@@ -78,28 +78,9 @@
   justify-content: flex-end;
   align-items: flex-end; }
 
-.footer_facebook {
+.footer_iconos, .footer_facebook, .footer_twitter, .footer_instagram {
   height: 70px;
-  animation-name: desplazarse;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; }
-
-.footer_twitter {
-  height: 70px;
-  margin-left: 15px;
-  animation-name: desplazarse;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; }
-
-.footer_instagram {
-  height: 70px;
-  margin-left: 15px;
-  animation-name: desplazarse_2;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; }
+  margin-left: 15px; }
 
 @keyframes desplazarse {
   10% {
@@ -164,8 +145,8 @@
   .logo {
     font-size: 25px; }
   .noticias__cuerpo iframe {
-    width: 2000px;
     height: 300px;
+    width: 2000px;
     margin-left: 20px;
     margin-bottom: 20px; } }
 
@@ -185,8 +166,8 @@
     height: 100px; }
     .footer a {
       transform: scale(0.5, 0.5);
-      width: 60px;
-      height: 50px; }
+      height: 50px;
+      width: 60px; }
   .footer_twitter {
     margin-left: 50px; }
   .footer_instagram {
@@ -201,8 +182,8 @@
   .navbar__titulo {
     font-size: 20px; }
   .navbar__lista {
-    width: 250px;
     height: 40px;
+    width: 250px;
     font-size: 12px; }
   .noticias {
     height: auto; }
@@ -212,10 +193,10 @@
     justify-content: space-between;
     margin-top: 20px; }
     .noticias__cuerpo iframe {
-      width: 250px;
       height: 200px;
+      width: 250px;
       align-self: center; }
     .noticias__cuerpo p {
-      width: 250px;
       height: 170px;
+      width: 250px;
       align-self: center; } }

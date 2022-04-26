@@ -6,6 +6,18 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+$estilos: (
+centro: center,
+tFuente: 30px,
+paddingSponsors: 5px,
+);
+
+
+@mixin tamaño($height, $width) {
+    height: $height;
+    width: $width;
+} 
+
 .logo{
     background-color: $colorLogo;
     height: 181px;
@@ -20,7 +32,7 @@
     }
     h1{
         margin: 10px;
-        align-self: center;
+        align-self: map-get($estilos, centro);
     }
 }
 
@@ -41,17 +53,16 @@
 
 .navbar__titulo{
     color: rgb(36, 240, 36);
-    font-size: 30px;
+    font-size: map-get($estilos, tFuente);
 }
 
 .navbar__lista{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: map-get($estilos, centro);
     justify-content: space-around;
     list-style: none;
-    width: 350px;
-    height: 40px;
+    @include tamaño(40px,350px);
 }
 
 .noticias{
@@ -59,8 +70,8 @@
     height: auto;
     grid-area: noticias;
     h3{
-    font-size: 30px;
-    text-align: center;
+    font-size: map-get($estilos, tFuente);
+    text-align: map-get($estilos, centro);
     text-decoration: underline;
     animation-name: desplazarse_3;
     animation-duration: 2s;
@@ -75,13 +86,12 @@
     justify-content: space-between;
     margin-top: 20px;
     iframe{
-    width: 1000px;
-    height: 300px;
+    @include tamaño(300px,1000px);
     margin-left: 20px;
     }
     p{
     display: flex;
-    align-self: center;
+    align-self: map-get($estilos, centro);
     margin-right: 30px;
     margin-left: 30px;
     }
@@ -97,30 +107,21 @@
     align-items: flex-end;
 }
 
-.footer_facebook{
+.footer_iconos{
     height: 70px;
-    animation-name: desplazarse;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    margin-left: 15px;
+}
+
+.footer_facebook{
+    @extend .footer_iconos;
 }
 
 .footer_twitter{
-    height: 70px;
-    margin-left: 15px;
-    animation-name: desplazarse;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    @extend .footer_iconos;
 }
 
 .footer_instagram{
-    height: 70px;
-    margin-left: 15px;
-    animation-name: desplazarse_2;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    @extend .footer_iconos;
 }
 
 @keyframes desplazarse {
@@ -173,7 +174,7 @@
 .sponsors{
     grid-area: sponsors;
     background-color:  white;
-    padding: 5px;
+    padding: map-get($estilos, paddingSponsors);
     height: 400px;
     display: flex;
     flex-wrap: wrap;
@@ -215,8 +216,7 @@
     }
 
     .noticias__cuerpo iframe{
-        width: 2000px;
-        height: 300px;
+        @include tamaño(300px,2000px);
         margin-left: 20px;
         margin-bottom: 20px;
     }
@@ -241,8 +241,7 @@
         height: 100px;
         a{
             transform: scale(0.5,0.5);
-            width: 60px;
-            height: 50px;
+            @include tamaño(50px,60px);
         }
     }
 
@@ -262,7 +261,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: map-get($estilos, centro);
     }
 
     .navbar__titulo{
@@ -270,8 +269,7 @@
     }
     
     .navbar__lista{
-        width: 250px;
-        height: 40px;
+        @include tamaño(40px,250px);
         font-size: 12px;
     }
     
@@ -285,14 +283,12 @@
         justify-content: space-between;
         margin-top: 20px;
         iframe{
-            width: 250px;
-            height: 200px;
-            align-self: center;
+            @include tamaño(200px,250px);
+            align-self: map-get($estilos, centro);
         }
         p{
-            width: 250px;
-            height: 170px;
-            align-self: center;
+            @include tamaño(170px,250px);
+            align-self: map-get($estilos, centro);
         }
     }
 }
