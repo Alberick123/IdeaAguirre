@@ -99,31 +99,16 @@
 
 .footer_facebook{
     height: 70px;
-    /*
-    animation-name: desplazarse;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;*/
 }
 
 .footer_twitter{
     height: 70px;
     margin-left: 15px;
-    /*
-    animation-name: desplazarse;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;*/
 }
 
 .footer_instagram{
     height: 70px;
     margin-left: 15px;
-    /*
-    animation-name: desplazarse_2;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;*/
 }
 
 @keyframes desplazarse {
@@ -347,12 +332,10 @@ table, th, td{
 }
 
 .main__tickets table{
-
     width: 60%;
     border-collapse: collapse;
     background-position: 5px;
     text-align: center;
-    
 }
 
 .imagen__tickets img{
